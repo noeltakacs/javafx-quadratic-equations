@@ -1,0 +1,164 @@
+.label, #title {
+    -fx-font-size: 20px;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#title {
+    -fx-font-size: 25px;
+    -fx-padding: 10px;
+}
+
+.field, .output {
+    -fx-min-height: 40px;
+    -fx-min-width: 206px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-border-width: 2px;
+    -fx-background-color: rgb(25, 25, 25);
+    -fx-border-radius:20px;
+    -fx-padding: 8px;
+    -fx-text-fill: white;
+}
+
+.calculate {
+    -fx-font-size: 16px;
+    -fx-border-width: 5px;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-min-width: 125px;
+    -fx-border-radius: 0px 20px 0px 20px;
+    -fx-background-radius: 0px 20px 0px 20px;
+    -fx-text-fill: white;
+    -fx-background-color: white;
+    -fx-border-color: rgb(35, 66, 122);
+    -fx-background-color: rgb(35, 66, 122);
+}
+
+.root {
+    -fx-background-color: rgb(25, 25, 25);
+}
+
+.calculate:hover,
+.calculate:focus {
+  -fx-border-color: rgb(127, 162, 226);
+  -fx-background-color: rgb(127, 162, 226);
+}
+
+.v-box, .grid-pane {
+    -fx-padding: 10;
+    -fx-border-style: solid inside;
+    -fx-border-width: 2;
+    -fx-border-insets: 5; 
+    -fx-border-radius: 5; 
+    -fx-border-color: white;
+}
+
+.chart-plot-background {
+    -fx-background-color: rgb(25, 25, 25);
+    -fx-border-color: white; 
+    -fx-border-style: solid; 
+    -fx-border-width: 3px; 
+    -fx-border-insets: -3 -4 -4 -3;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: rgb(182, 182, 182);
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgb(182, 182, 182);
+}
+
+.chart-vertical-zero-line {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 2; 
+}
+
+.chart-horizontal-zero-line {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 2; 
+}
+
+.chart-series-line {
+    -fx-stroke: red;
+}
+
+.axis-tick-mark {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 0; 
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 0; 
+}
+
+.axis {    
+    -fx-tick-label-fill: #ffffff;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-tick-length: 15;
+    -fx-minor-tick-length: 8;
+}
+
+.clear {
+    -fx-border-color: rgb(255, 0, 0);
+    -fx-background-color: rgb(255, 0, 0);
+    -fx-text-fill: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.clear:hover {
+    -fx-background-color: rgb(255, 115, 115);
+    -fx-border-color: rgb(255, 115, 115);
+}
+
+.theme-switch {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.radio-button .radio {
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-background-color: rgb(25, 25, 25);
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+    -fx-mark-color: white;
+}
+
+.check-box .box {
+	-fx-background-color: rgb(25, 25, 25);
+	-fx-border-color: #ffffff;
+	-fx-border-radius: 0; 
+}
+.check-box .mark {
+ 	-fx-shape: "M1.73,12.91 8.1,19.28 22.79,4.59 22.79,1.59 8.1,16.28 1.73,9.91";
+}
+.check-box:selected .mark {
+	-fx-background-color: rgb(25, 25, 25);
+}
+.check-box:selected .box {
+	-fx-background-color: #ffffff;
+}
+
+.checkbox {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}

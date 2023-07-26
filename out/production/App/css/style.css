@@ -1,0 +1,33 @@
+#temp, #radiobutton {
+    -fx-font-size: 25px;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+}
+
+#field, #output {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-min-width: 280px;
+    -fx-min-height: 45px;
+    -fx-font-size: 20px;
+    -fx-padding: 10px;
+    -fx-background-color: white;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+}
+
+#output {
+    -fx-background-color: yellow;
+}
+
+.button {
+    -fx-font-size: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+}
+
+#radiobutton {
+    -fx-font-size: 15px;
+}

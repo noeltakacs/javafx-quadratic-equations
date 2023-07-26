@@ -1,0 +1,131 @@
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.RowConstraints;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
+import javafx.scene.image.Image;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+
+public class App extends Application{
+  public static final int WIDTH = 1280;
+  public static final int HEIGHT = 720;
+  public static final int ROWNUM = 20;
+  public static final int COLNUM = 7;
+  
+  private Label lb_title, lb_format, lb_coefA, lb_coefB, lb_coefC, lb_x1, lb_x2, lb_discriminant, lb_x1output, lb_x2output, lb_discriminantOutput;
+  private TextField tf_coefA, tf_coefB, tf_coefC;
+  private Button bt_Calculate;
+  
+  public void initGUI(Stage stage){
+    //Label
+    lb_title = new Label("Quadratic equation");
+    lb_title.setId("title");
+    lb_format = new Label("ax2 + bx + c = 0");
+    lb_coefA = new Label("a = ");
+    lb_coefB = new Label("b = ");
+    lb_coefC = new Label("c = ");
+    lb_discriminant = new Label("D = ");
+    lb_discriminantOutput = new Label();
+    lb_discriminantOutput.setId("output");
+    lb_x1 = new Label("x1 = ");
+    lb_x1output = new Label();
+    lb_x1output.setId("output");
+    lb_x2 = new Label("x2 = ");
+    lb_x2output = new Label();
+    lb_x2output.setId("output");
+    
+    //TextField
+    tf_coefA = new TextField();
+    tf_coefA.setId("field");
+    tf_coefB = new TextField();
+    tf_coefB.setId("field");
+    tf_coefC = new TextField();
+    tf_coefC.setId("field");
+    
+    //Button
+    bt_Calculate = new Button("Calculate");
+    
+    GridPane gridPane = new GridPane();
+    gridPane.setGridLinesVisible(true);
+    
+    gridPane.add(lb_coefA, 1, 5, 1, 1);
+    gridPane.add(lb_coefB, 1, 6, 1, 1);
+    gridPane.add(lb_coefC, 1, 7, 1, 1);
+    gridPane.add(tf_coefA, 2, 5, 4, 1);
+    gridPane.add(tf_coefB, 2, 6, 4, 1);
+    gridPane.add(tf_coefC, 2, 7, 4, 1);
+    gridPane.add(lb_discriminant, 1, 9, 1, 1);
+    gridPane.add(lb_discriminantOutput, 2, 9, 4, 1);
+    gridPane.add(lb_x1, 1, 11, 1, 1);
+    gridPane.add(lb_x2, 1, 12, 1, 1);
+    gridPane.add(lb_x1output, 2, 11, 4, 1);
+    gridPane.add(lb_x2output, 2, 12, 4, 1);
+    gridPane.add(bt_Calculate, 2, 14, 3, 1);
+    
+    
+    for (int i = 0; i < COLNUM; i++) {
+      ColumnConstraints colConst = new ColumnConstraints();
+      colConst.setPercentWidth(100.0 / COLNUM);
+      gridPane.getColumnConstraints().add(colConst);
+    }
+    
+    for (int i = 0; i < ROWNUM; i++) {
+      RowConstraints rowConst = new RowConstraints();
+      rowConst.setPercentHeight(100.0 / ROWNUM);
+      gridPane.getRowConstraints().add(rowConst);
+    }
+    
+    VBox vbox = new VBox();
+    vbox.getChildren().add(lb_title);
+    vbox.setAlignment(Pos.CENTER);
+    
+    NumberAxis xAxis = new NumberAxis();
+    NumberAxis yAxis = new NumberAxis();
+    LineChart lineChart = new LineChart(xAxis, yAxis);
+    
+    BorderPane borderPane = new BorderPane();
+    borderPane.setTop(vbox);
+    borderPane.setLeft(gridPane);
+    borderPane.setCenter(lineChart);
+    
+    Scene scene = new Scene(borderPane, WIDTH, HEIGHT);
+    stage.setTitle("Quadratic equation");
+    stage.setScene(scene);
+    stage.getIcons().add(new Image("/img/icon.png"));
+    scene.getStylesheets().add("css/style.css");
+    stage.setResizable(true);
+    stage.setMaximized(true);
+    
+    stage.show();
+  }
+  
+  public void start(Stage stage){
+    initGUI(stage);
+  }
+  
+  public static void main(String arg[]){
+    Application.launch(arg);
+  }
+}
+
+/*
+
+TODO:
+  settings button:
+  - dark mode
+  - show graph grid
+  
+REMINDERS:
+  import javafx.scene.shape.Line;
+  import javafx.scene.shape.Rectangle;
+  
+*/

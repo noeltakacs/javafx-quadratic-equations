@@ -1,0 +1,113 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.geometry.Pos;
+import javafx.scene.image.Image;
+import javafx.event.EventHandler;
+import javafx.event.Event;
+import java.text.DecimalFormat;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.RadioButton;
+
+public class App extends Application{
+  public static final int WIDTH = 500;
+  public static final int HEIGHT = 250;
+
+  private static final DecimalFormat decfor = new DecimalFormat("0.00");
+
+  private Label lb_fahrenheit, lb_celsius, lb_output;
+  private Button bt_calculate;
+  private TextField tf_input;
+  private Alert alert;
+  private boolean state = true;
+  
+  public void start(Stage stage){
+    ToggleGroup toggleGroup = new ToggleGroup();
+  
+    lb_fahrenheit = new Label("°F");
+    lb_fahrenheit.setId("temp");
+    
+    lb_celsius = new Label("°C");
+    lb_celsius.setId("temp");
+    
+    lb_output = new Label("");
+    lb_output.setId("output");
+    
+    bt_calculate = new Button("Calculate");
+    bt_calculate.setOnAction(new ButtonClick());
+    
+    tf_input = new TextField();
+    tf_input.setId("field");
+    
+    alert = new Alert(AlertType.ERROR);
+    alert.setContentText("Wrong input, temperature must be a number");
+    
+    RadioButton rb_fahrenheitToCelsius = new RadioButton("°F -> °C");
+    rb_fahrenheitToCelsius.setToggleGroup(toggleGroup);
+    rb_fahrenheitToCelsius.setSelected(true);
+    rb_fahrenheitToCelsius.setId("radiobutton");
+    
+    rb_fahrenheitToCelsius.setOnAction(new EventHandler(){
+      public void handle(Event event){
+        lb_fahrenheit.setText("°F");
+        lb_celsius.setText("°C");
+        state = true;
+      }
+    });
+    
+    RadioButton rb_celsiusToFahrenheit = new RadioButton("°C -> °F");
+    rb_celsiusToFahrenheit.setToggleGroup(toggleGroup);
+    rb_celsiusToFahrenheit.setId("radiobutton");
+    
+    rb_celsiusToFahrenheit.setOnAction(new EventHandler(){
+      public void handle(Event event){
+        lb_fahrenheit.setText("°C");
+        lb_celsius.setText("°F");
+        state = false;
+      }
+    });
+    
+    GridPane gridPane = new GridPane();
+    gridPane.setAlignment(Pos.CENTER);
+    gridPane.add(tf_input, 0, 0);
+    gridPane.add(lb_fahrenheit, 1, 0);
+    gridPane.add(lb_output, 0, 1);
+    gridPane.add(lb_celsius, 1, 1);
+    gridPane.add(rb_fahrenheitToCelsius, 0, 2);
+    gridPane.add(rb_celsiusToFahrenheit, 1, 2);
+    gridPane.add(bt_calculate, 0, 3);
+
+    Scene scene = new Scene(gridPane, WIDTH, HEIGHT);
+    //gridPane.setGridLinesVisible(true);
+    gridPane.setHgap(30);
+    gridPane.setVgap(10);
+    
+    stage.setScene(scene);
+    stage.setResizable(false);
+    stage.setTitle("Temperature calculation");
+    stage.getIcons().add(new Image("/img/icon.png"));
+    scene.getStylesheets().add("css/style.css");
+    stage.show();
+  }
+  
+  class ButtonClick implements EventHandler{
+    public void handle(Event event){
+      try{
+        float tempertature = Calculation.calculation(state, Float.parseFloat(tf_input.getText()));
+        lb_output.setText(String.valueOf(decfor.format(tempertature)));
+      }catch(Exception e){
+        alert.show();
+      }
+    }
+  }
+  
+  public static void main(String arg[]){
+    Application.launch(arg);
+  }
+}

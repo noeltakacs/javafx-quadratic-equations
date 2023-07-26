@@ -1,0 +1,27 @@
+.root{
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(255, 0, 0, 0.629);
+}
+
+.alert:header *.header-panel{
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-font-size: 25px;
+    -fx-border-width: 0 0 3px 0;
+    -fx-border-color: black;
+}
+
+.button {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.button:hover {
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,9 @@
+public class Calculation{
+  public static float calculation(boolean state, float temperature){
+    if(state == true){
+      return (float)((temperature - 32.0) / 1.8);
+    }
+    
+    return (float)((temperature * 1.8) + 32.0);
+  }
+}
