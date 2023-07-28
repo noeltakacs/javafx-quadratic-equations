@@ -28,7 +28,7 @@ You can access the application by downloading the ZIP file (or cloning the repos
 
 I recommend doing this via ``Visual Studio Code``
 
-## 🫶 How to support me?
+## 🫶 How can you help?
 
 
 ## 📠 License
