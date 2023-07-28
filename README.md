@@ -5,9 +5,8 @@
 
 <table>
   <tr>
-    <td><img src="" width="300"></td>
-    <td><img src="" width="300"></td>
-    <td><img src="" width="300"></td>
+    <td><img src="https://github.com/noeltakacs/quadratic-equation-calculator/blob/main/src/screenshots/screenshot1.png" width="800"></td>
+    <td><img src="https://github.com/noeltakacs/quadratic-equation-calculator/blob/main/src/screenshots/screenshot2.png" width="800"></td>
   </tr>
 </table>
 
