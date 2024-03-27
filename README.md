@@ -1,7 +1,7 @@
 <h1 align="center">Quadratic equation calculator</h1>
 
 ## 🤔 What is this?
-<strong> Are you struggling to solve quadratic equations or visualize their graphs? Look no further! <br> Quadratic equation calculator, built in JavaFX, is here to simplify your mathematical journey. This tool calculates the roots of both linear and quadratic equations and provides graphical visualizations in seconds. Whether you are a student, teacher, or mathematics enthusiast, this intuitive tool will quickly become your go-to resource for understanding quadratic equations like never before </strong>.
+<strong> Are you struggling to solve quadratic equations or visualize their graphs? Look no further! <br> Quadratic equation calculator, built in JavaFX, is here to simplify your mathematical journey. This tool calculates the roots of both linear and quadratic equations and provides graphical visualizations in seconds. Whether you are a student, teacher, or mathematics enthusiast, this intuitive tool will quickly become your go-to resource for understanding quadratic equations like never before. </strong>
 
 <table>
   <tr>
