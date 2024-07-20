@@ -69,7 +69,7 @@ public class App extends Application{
 
   public void initGUI(Stage stage){
     //Vytváranie Labelov a priraďovanie triedy
-    lb_title = new Label("Quadratic equation");
+    lb_title = new Label("QuadCalc");
     lb_title.setId("title");
     lb_coefA = new Label("a = ");
     lb_coefB = new Label("b = ");
