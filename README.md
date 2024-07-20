@@ -38,6 +38,6 @@ In all honesty, the app has its fair share of problems beyond the ones mentioned
 
 ## 📠 License
 
-Quadratic equation calculator is a free and open source software. 
+QuadCalc is a free and open source software. 
 
 I very much appreciate any contributions to this project as I encourage you to fork it and build something new!
