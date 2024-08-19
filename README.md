@@ -22,8 +22,10 @@
 - [x] Dark mode/light mode
 
 ## 📲 How to download this app?
-As of now, this application is not available for download as a standalone executable or mobile app, and it's currently provided only as source code.
-You can access the application by downloading the ZIP file (or cloning the repository) and building the project in your IDE.
+As of now, this application is not available for download as a standalone executable, and it's currently provided only as source code.
+1. Clone the repository or download the ZIP file.
+2. Open the project in your IDE.
+3. Build and run the project.
 
 I recommend doing this via ``Visual Studio Code``
 
